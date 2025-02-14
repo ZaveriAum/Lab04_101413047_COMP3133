@@ -1,0 +1,238 @@
+{
+	"info": {
+		"_postman_id": "1319a757-3760-4bcd-b12a-ede17ca541f3",
+		"name": "Lab-4 COMP3133",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33484591",
+		"_collection_link": "https://flowhr-devs.postman.co/workspace/Sem-6~16da1889-ac03-44e2-8e05-326e1a4708e9/collection/33484591-1319a757-3760-4bcd-b12a-ede17ca541f3?action=share&source=collection_link&creator=33484591"
+	},
+	"item": [
+		{
+			"name": "success add users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"name\": \"Ervin Howell\",\r\n    \"username\": \"Antonette\",\r\n    \"email\": \"Shanna@melissa.tv\",\r\n    \"address\": {\r\n      \"street\": \"Victor Plains\",\r\n      \"suite\": \"Suite 879\",\r\n      \"city\": \"Wisokyburgh\",\r\n      \"zipcode\": \"90566-7771\",\r\n      \"geo\": {\r\n        \"lat\": \"-43.9509\",\r\n        \"lng\": \"-34.4618\"\r\n      }\r\n    },\r\n    \"phone\": \"1-901-692-6593\",\r\n    \"website\": \"https://anastasia.net\",\r\n    \"company\": {\r\n      \"name\": \"Deckow-Crist\",\r\n      \"catchPhrase\": \"Proactive didactic contingency\",\r\n      \"bs\": \"synergize scalable supply-chains\"\r\n    }\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "required feild",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"name\": \"Ervin Howell\",\r\n    \"username\": \"Antonette\",\r\n    \"email\": \"Shanna@melissa.tv\",\r\n    \"address\": {\r\n      \"street\": \"Victor Plains\",\r\n      \"suite\": \"Suite 879\",\r\n      \"city\": \"Wisokyburgh\",\r\n      \"zipcode\": \"90566-7771\",\r\n      \"geo\": {\r\n        \"lat\": \"-43.9509\",\r\n        \"lng\": \"-34.4618\"\r\n      }\r\n    },\r\n    \"phone\": \"1-901-692-6593\",\r\n    // \"website\": \"https://anastasia.net\",\r\n    \"company\": {\r\n      \"name\": \"Deckow-Crist\",\r\n      \"catchPhrase\": \"Proactive didactic contingency\",\r\n      \"bs\": \"synergize scalable supply-chains\"\r\n    }\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "improper Web url format",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"name\": \"Ervin Howell\",\r\n    \"username\": \"Antonette\",\r\n    \"email\": \"Shanna@melissa.tv\",\r\n    \"address\": {\r\n      \"street\": \"Victor Plains\",\r\n      \"suite\": \"Suite 879\",\r\n      \"city\": \"Wisokyburgh\",\r\n      \"zipcode\": \"90566-7771\",\r\n      \"geo\": {\r\n        \"lat\": \"-43.9509\",\r\n        \"lng\": \"-34.4618\"\r\n      }\r\n    },\r\n    \"phone\": \"1-901-692-6593\",\r\n    \"website\": \"https:anastasia.net\",\r\n    \"company\": {\r\n      \"name\": \"Deckow-Crist\",\r\n      \"catchPhrase\": \"Proactive didactic contingency\",\r\n      \"bs\": \"synergize scalable supply-chains\"\r\n    }\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "improper username format",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"name\": \"Ervin Howell\",\r\n    \"username\": \"Ane\",\r\n    \"email\": \"Shanna@melissa.tv\",\r\n    \"address\": {\r\n      \"street\": \"Victor Plains\",\r\n      \"suite\": \"Suite 879\",\r\n      \"city\": \"Wisokyburgh\",\r\n      \"zipcode\": \"90566-7771\",\r\n      \"geo\": {\r\n        \"lat\": \"-43.9509\",\r\n        \"lng\": \"-34.4618\"\r\n      }\r\n    },\r\n    \"phone\": \"1-901-692-6593\",\r\n    \"website\": \"https://anastasia.net\",\r\n    \"company\": {\r\n      \"name\": \"Deckow-Crist\",\r\n      \"catchPhrase\": \"Proactive didactic contingency\",\r\n      \"bs\": \"synergize scalable supply-chains\"\r\n    }\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "improper email format",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"name\": \"Ervin Howell\",\r\n    \"username\": \"Ane\",\r\n    \"email\": \"Shannamelissa.tv\",\r\n    \"address\": {\r\n      \"street\": \"Victor Plains\",\r\n      \"suite\": \"Suite 879\",\r\n      \"city\": \"Wisokyburgh\",\r\n      \"zipcode\": \"90566-7771\",\r\n      \"geo\": {\r\n        \"lat\": \"-43.9509\",\r\n        \"lng\": \"-34.4618\"\r\n      }\r\n    },\r\n    \"phone\": \"1-901-692-6593\",\r\n    \"website\": \"https://anastasia.net\",\r\n    \"company\": {\r\n      \"name\": \"Deckow-Crist\",\r\n      \"catchPhrase\": \"Proactive didactic contingency\",\r\n      \"bs\": \"synergize scalable supply-chains\"\r\n    }\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "improper city format",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"name\": \"Ervin Howell\",\r\n    \"username\": \"Antonette\",\r\n    \"email\": \"Shanna@melissa.tv\",\r\n    \"address\": {\r\n      \"street\": \"Victor Plains\",\r\n      \"suite\": \"Suite 879\",\r\n      \"city\": \"Wisoky@burgh\",\r\n      \"zipcode\": \"90566-7771\",\r\n      \"geo\": {\r\n        \"lat\": \"-43.9509\",\r\n        \"lng\": \"-34.4618\"\r\n      }\r\n    },\r\n    \"phone\": \"1-901-692-6593\",\r\n    \"website\": \"https://anastasia.net\",\r\n    \"company\": {\r\n      \"name\": \"Deckow-Crist\",\r\n      \"catchPhrase\": \"Proactive didactic contingency\",\r\n      \"bs\": \"synergize scalable supply-chains\"\r\n    }\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "improper zipcode format",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"name\": \"Ervin Howell\",\r\n    \"username\": \"Antonette\",\r\n    \"email\": \"Shanna@melissa.tv\",\r\n    \"address\": {\r\n      \"street\": \"Victor Plains\",\r\n      \"suite\": \"Suite 879\",\r\n      \"city\": \"Wisokyburgh\",\r\n      \"zipcode\": \"a0566-7771\",\r\n      \"geo\": {\r\n        \"lat\": \"-43.9509\",\r\n        \"lng\": \"-34.4618\"\r\n      }\r\n    },\r\n    \"phone\": \"1-901-692-6593\",\r\n    \"website\": \"https://anastasia.net\",\r\n    \"company\": {\r\n      \"name\": \"Deckow-Crist\",\r\n      \"catchPhrase\": \"Proactive didactic contingency\",\r\n      \"bs\": \"synergize scalable supply-chains\"\r\n    }\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "improper phone number format",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"name\": \"Ervin Howell\",\r\n    \"username\": \"Antonette\",\r\n    \"email\": \"Shanna@melissa.tv\",\r\n    \"address\": {\r\n      \"street\": \"Victor Plains\",\r\n      \"suite\": \"Suite 879\",\r\n      \"city\": \"Wisokyburgh\",\r\n      \"zipcode\": \"90566-7771\",\r\n      \"geo\": {\r\n        \"lat\": \"-43.9509\",\r\n        \"lng\": \"-34.4618\"\r\n      }\r\n    },\r\n    \"phone\": \"1-90-692-6593\",\r\n    \"website\": \"https://anastasia.net\",\r\n    \"company\": {\r\n      \"name\": \"Deckow-Crist\",\r\n      \"catchPhrase\": \"Proactive didactic contingency\",\r\n      \"bs\": \"synergize scalable supply-chains\"\r\n    }\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
